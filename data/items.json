@@ -1,0 +1,17 @@
+[
+  {
+    "id": "a3f47d2e-6b2f-4c9a-9b1d-1a2b3c4d5e6f",
+    "name": "apple",
+    "price": 1.5
+  },
+  {
+    "id": "b7c12e4f-8d9a-4f2b-9c3d-7e8f9a0b1c2d",
+    "name": "banana",
+    "price": 0.8
+  },
+  {
+    "id": "c9d8e7f6-5b4a-3c2d-1e0f-9a8b7c6d5e4f",
+    "name": "notebook",
+    "price": 3.25
+  }
+]

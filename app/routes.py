@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 
 from .schemas import Item
-from .storage import add_item, get_items, find_item
+from .storage import add_item, get_items, find_item, delete_item as storage_delete_item, update_item as storage_update_item
 
 router = APIRouter()
 
@@ -24,6 +24,22 @@ def get_all_items():
 @router.get("/items/{item_id}", response_model=Item)
 def read_item(item_id: str) -> Item:
     item = find_item(item_id)
+    if item is None:
+        raise HTTPException(status_code=404, detail="Item not found")
+    return item
+
+
+@router.delete("/items/{item_id}", response_model=Item)
+def delete_item(item_id: str) -> Item:
+    item = storage_delete_item(item_id)
+    if item is None:
+        raise HTTPException(status_code=404, detail="Item not found")
+    return item
+
+
+@router.put("/items/{item_id}", response_model=Item)
+def update_item(item_id: str, updated_item: Item) -> Item:
+    item = storage_update_item(item_id, updated_item)
     if item is None:
         raise HTTPException(status_code=404, detail="Item not found")
     return item
