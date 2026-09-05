@@ -1,17 +1,282 @@
 [
   {
-    "id": "a3f47d2e-6b2f-4c9a-9b1d-1a2b3c4d5e6f",
+    "id": 1,
     "name": "apple",
-    "price": 1.5
+    "price": 1.5,
+    "quantity": 50,
+    "category": "produce",
+    "in_promotion": true
   },
   {
-    "id": "b7c12e4f-8d9a-4f2b-9c3d-7e8f9a0b1c2d",
+    "id": 2,
     "name": "banana",
-    "price": 0.8
+    "price": 0.8,
+    "quantity": 200,
+    "category": "produce",
+    "in_promotion": false
   },
   {
-    "id": "c9d8e7f6-5b4a-3c2d-1e0f-9a8b7c6d5e4f",
+    "id": 3,
     "name": "notebook",
-    "price": 3.25
+    "price": 3.25,
+    "quantity": 100,
+    "category": "household",
+    "in_promotion": false
+  },
+  {
+    "id": 4,
+    "name": "orange",
+    "price": 1.2,
+    "quantity": 75,
+    "category": "produce",
+    "in_promotion": true
+  },
+  {
+    "id": 5,
+    "name": "pen",
+    "price": 1.75,
+    "quantity": 150,
+    "category": "household",
+    "in_promotion": false
+  },
+  {
+    "id": 6,
+    "name": "water bottle",
+    "price": 12.5,
+    "quantity": 40,
+    "category": "household",
+    "in_promotion": true
+  },
+  {
+    "id": 7,
+    "name": "brown rice",
+    "price": 4.5,
+    "quantity": 60,
+    "category": "pantry",
+    "in_promotion": false
+  },
+  {
+    "id": 8,
+    "name": "whole wheat bread",
+    "price": 3.75,
+    "quantity": 45,
+    "category": "bakery",
+    "in_promotion": true
+  },
+  {
+    "id": 9,
+    "name": "olive oil",
+    "price": 9.99,
+    "quantity": 30,
+    "category": "pantry",
+    "in_promotion": false
+  },
+  {
+    "id": 10,
+    "name": "tofu",
+    "price": 3.49,
+    "quantity": 50,
+    "category": "vegan",
+    "in_promotion": true
+  },
+  {
+    "id": 11,
+    "name": "oat milk",
+    "price": 4.25,
+    "quantity": 35,
+    "category": "vegan",
+    "in_promotion": false
+  },
+  {
+    "id": 12,
+    "name": "red lentils",
+    "price": 2.99,
+    "quantity": 70,
+    "category": "vegan",
+    "in_promotion": false
+  },
+  {
+    "id": 13,
+    "name": "vegan cheese",
+    "price": 5.75,
+    "quantity": 25,
+    "category": "vegan",
+    "in_promotion": true
+  },
+  {
+    "id": 14,
+    "name": "ground beef",
+    "price": 7.99,
+    "quantity": 30,
+    "category": "meat",
+    "in_promotion": false
+  },
+  {
+    "id": 15,
+    "name": "chicken breast",
+    "price": 8.49,
+    "quantity": 40,
+    "category": "meat",
+    "in_promotion": true
+  },
+  {
+    "id": 16,
+    "name": "pork chops",
+    "price": 6.99,
+    "quantity": 25,
+    "category": "meat",
+    "in_promotion": false
+  },
+  {
+    "id": 17,
+    "name": "sourdough loaf",
+    "price": 4.99,
+    "quantity": 20,
+    "category": "bakery",
+    "in_promotion": false
+  },
+  {
+    "id": 18,
+    "name": "blueberry muffins",
+    "price": 5.49,
+    "quantity": 24,
+    "category": "bakery",
+    "in_promotion": true
+  },
+  {
+    "id": 19,
+    "name": "butter croissants",
+    "price": 6.25,
+    "quantity": 18,
+    "category": "bakery",
+    "in_promotion": false
+  },
+  {
+    "id": 20,
+    "name": "romaine lettuce",
+    "price": 2.49,
+    "quantity": 55,
+    "category": "produce",
+    "in_promotion": false
+  },
+  {
+    "id": 21,
+    "name": "roma tomatoes",
+    "price": 1.99,
+    "quantity": 90,
+    "category": "produce",
+    "in_promotion": true
+  },
+  {
+    "id": 22,
+    "name": "russet potatoes",
+    "price": 4.79,
+    "quantity": 65,
+    "category": "produce",
+    "in_promotion": false
+  },
+  {
+    "id": 23,
+    "name": "avocados",
+    "price": 1.69,
+    "quantity": 80,
+    "category": "produce",
+    "in_promotion": true
+  },
+  {
+    "id": 24,
+    "name": "smoked turkey slices",
+    "price": 6.49,
+    "quantity": 28,
+    "category": "deli",
+    "in_promotion": false
+  },
+  {
+    "id": 25,
+    "name": "provolone cheese",
+    "price": 5.99,
+    "quantity": 32,
+    "category": "deli",
+    "in_promotion": true
+  },
+  {
+    "id": 26,
+    "name": "potato salad",
+    "price": 4.49,
+    "quantity": 20,
+    "category": "deli",
+    "in_promotion": false
+  },
+  {
+    "id": 27,
+    "name": "red wine",
+    "price": 14.99,
+    "quantity": 36,
+    "category": "liquor",
+    "in_promotion": true
+  },
+  {
+    "id": 28,
+    "name": "lager beer",
+    "price": 11.99,
+    "quantity": 48,
+    "category": "liquor",
+    "in_promotion": false
+  },
+  {
+    "id": 29,
+    "name": "sparkling water",
+    "price": 5.99,
+    "quantity": 60,
+    "category": "beverages",
+    "in_promotion": true
+  },
+  {
+    "id": 30,
+    "name": "free-range eggs",
+    "price": 4.89,
+    "quantity": 45,
+    "category": "dairy and eggs",
+    "in_promotion": false
+  },
+  {
+    "id": 31,
+    "name": "cheddar cheese",
+    "price": 5.25,
+    "quantity": 38,
+    "category": "dairy and eggs",
+    "in_promotion": true
+  },
+  {
+    "id": 32,
+    "name": "Greek yogurt",
+    "price": 4.75,
+    "quantity": 42,
+    "category": "dairy and eggs",
+    "in_promotion": false
+  },
+  {
+    "id": 33,
+    "name": "frozen pizza",
+    "price": 7.49,
+    "quantity": 35,
+    "category": "frozen foods",
+    "in_promotion": true
+  },
+  {
+    "id": 34,
+    "name": "peanut butter",
+    "price": 4.29,
+    "quantity": 50,
+    "category": "pantry",
+    "in_promotion": false
+  },
+  {
+    "id": 35,
+    "name": "orange juice",
+    "price": 4.99,
+    "quantity": 44,
+    "category": "beverages",
+    "in_promotion": true
   }
 ]
