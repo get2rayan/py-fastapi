@@ -1,3 +1,5 @@
+from typing import Dict
+
 from fastapi import APIRouter, HTTPException
 
 from .schemas import Item
@@ -21,6 +23,7 @@ def create_item(item: Item) -> Item:
 def get_items_by_category(category: str | None = None) -> list[Item]:
     return get_items(category)
 
+
 # Get item by name (eg: items/apple)
 @router.get("/items/{name}", response_model=Item)
 def get_item_by_name(name: str) -> Item:
@@ -39,8 +42,8 @@ def delete_item(name: str) -> Item:
 
 
 @router.put("/items/{item_id}", response_model=Item)
-def update_item(item_id: int, updated_data: Item) -> Item:
-    item = storage_update_item(item_id, updated_data)
+def update_item(item_id: int, item_updates: Dict) -> Item:
+    item = storage_update_item(item_id, item_updates)
     if item is None:
         raise HTTPException(status_code=404, detail="Item not found")
     return item

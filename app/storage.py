@@ -1,9 +1,13 @@
+from ast import Dict
+from logger import logger
+
 from .schemas import Item
 
 items: list[Item] = []  # In-memory storage for items
 
 
 def add_item(item: Item) -> Item:
+    logger.debug(f"Adding item: {item}")
     item.id = max((pdt.id or 0 for pdt in items), default=0) + 1
     items.append(item)
     return item
@@ -33,11 +37,12 @@ def delete_item(name: str) -> Item | None:
     return None
 
 
-def update_item(item_id: int, updated_data: Item) -> Item | None:
+def update_item(item_id: int, item_updates: Dict) -> Item | None:
     for idx, item in enumerate(items):
         if item.id == item_id:
-            new_data = updated_data.model_dump(exclude_unset=True)
-            updated = {**item, **new_data}
-            items[idx] = updated
-            return updated
+            # Convert existing item to dict, merge, then convert back to Item model
+            logger.debug(f"Updating item with ID {item_id} with updates: {item_updates}")
+            merged_dict = {**item.model_dump(), **item_updates}
+            items[idx] = Item(**merged_dict)
+            return items[idx]
     return None
