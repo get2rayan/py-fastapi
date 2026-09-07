@@ -14,6 +14,7 @@ def add_item(item: Item) -> Item:
 
 
 def get_items(category: str | None = None) -> list[Item]:
+    logger.debug(f"Retrieving items : {category if category else 'all categories'}")
     if category:
         normalized_category = category.casefold()
         return [item for item in items if item.category.casefold() == normalized_category]
