@@ -2,7 +2,11 @@ import json
 from pathlib import Path
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
+from slowapi.middleware import SlowAPIMiddleware
 from . import storage
+from .app_state import limiter
+from slowapi.errors import RateLimitExceeded
+from slowapi.extension import _rate_limit_exceeded_handler
 from .schemas import Item
 from .routes import router
 
@@ -31,4 +35,11 @@ app = FastAPI(
 )
 
 
+# Attach the rate limiter to the app state
+app.state.limiter = limiter
+# Attach exception handler for rate limit exceeded
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+# Attach the SlowAPI middleware for rate limiting (default limits from the Limiter)
+app.add_middleware(SlowAPIMiddleware) 
+# Include the API router for handling item-related endpoints
 app.include_router(router)
